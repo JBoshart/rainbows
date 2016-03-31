@@ -1,3 +1,4 @@
+
 red = [255,0,0]
 green = [0,255,0]
 blue = [0,0,255]
@@ -14,7 +15,9 @@ color_lookup = {
   [0,0,255] => "blue",
   [125,0,255] => "violet",
   [255,0,255] => "magenta",
-  [255,0,125] => "raspberry"
+  [255,0,125] => "raspberry",
+  [75, 0, 130] => "indigo",
+  [143, 0, 255] => "electric_violet"
 }
 
 def mix_colors(color1,color2)
@@ -27,3 +30,20 @@ end
 
 new_color = mix_colors(red,green)
 puts "#{color_lookup[red]} #{red} + #{color_lookup[green]} #{green} = #{color_lookup[new_color]} #{new_color}"
+
+
+rainbow = [
+  {red: [255, 0, 0]},
+  {orange: [255, 127, 0]},
+  {yellow: [255, 255, 0]},
+  {green: [0, 255, 0]},
+  {blue: [0, 0, 255]},
+  {indigo: [75, 0, 130]},
+  {electric_violet: [143, 0, 255]}
+]
+
+rainbow.each do |i|
+  i.each do |key, value|
+    puts "#{key}"
+  end
+end
